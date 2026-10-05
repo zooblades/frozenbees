@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "frozenbees",
+  "version": "${version}",
+  "name": "Frozen Bees",
+  "description": "Frozen bees, frozen hives and cold honey for the coldest biomes.",
+  "authors": ["nazarbatrider"],
+  "license": "MIT",
+  "icon": "assets/frozenbees/icon.png",
+  "environment": "*",
+  "entrypoints": { "main": ["com.nazarbatrider.frozenbees.FrozenBees"] },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

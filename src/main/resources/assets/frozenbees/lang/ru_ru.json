@@ -1,0 +1,9 @@
+{
+  "itemGroup.frozenbees.main": "Замороженные пчёлы",
+  "block.frozenbees.snowdrop": "Подснежник",
+  "block.frozenbees.frostbloom": "Ледоцвет",
+  "block.frozenbees.frozen_honeycomb_block": "Блок замороженных сот",
+  "block.frozenbees.cold_honey_block": "Блок холодного мёда",
+  "item.frozenbees.frozen_honeycomb": "Замороженные соты",
+  "item.frozenbees.cold_honey_bottle": "Бутылочка холодного мёда"
+}
