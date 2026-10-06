@@ -6,6 +6,7 @@ import com.nazarbatrider.frozenbees.registry.ModBlocks;
 import com.nazarbatrider.frozenbees.registry.ModEntities;
 import com.nazarbatrider.frozenbees.registry.ModItemGroups;
 import com.nazarbatrider.frozenbees.registry.ModItems;
+import com.nazarbatrider.frozenbees.worldgen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.util.Identifier;
@@ -28,6 +29,7 @@ public class FrozenBees implements ModInitializer {
         ModEntities.register();
         ModItems.register();
         ModItemGroups.register();
+        ModWorldGen.register();
         ServerLifecycleEvents.SERVER_STOPPED.register(server -> FrozenHiveTracker.clear());
         LOGGER.info("Frozen Bees loaded");
     }

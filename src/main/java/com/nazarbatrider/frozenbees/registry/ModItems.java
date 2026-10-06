@@ -16,8 +16,8 @@ public class ModItems {
 
     public static final Item COLD_HONEY_BOTTLE = register("cold_honey_bottle", new ColdHoneyBottleItem(
             new Item.Settings().maxCount(16).recipeRemainder(Items.GLASS_BOTTLE)
-                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.1f).alwaysEdible()
-                            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 1200), 1.0f)
+                    .food(new FoodComponent.Builder().nutrition(3).saturationModifier(0.1f).alwaysEdible()
+                            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 600), 1.0f)
                             .build())));
 
     public static final Item FROZEN_BEE_SPAWN_EGG = register("frozen_bee_spawn_egg",

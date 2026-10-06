@@ -12,6 +12,9 @@ import net.minecraft.world.World;
 
 /** Бутылочка холодного мёда: пьётся, даёт сопротивление огню, снимает замерзание, возвращает бутылку. */
 public class ColdHoneyBottleItem extends Item {
+    /** Сопротивление огню длится 30 с, перезарядка 45 с, поэтому постоянной защиты нет. */
+    public static final int COOLDOWN_TICKS = 900;
+
     public ColdHoneyBottleItem(Settings settings) {
         super(settings);
     }
@@ -21,6 +24,9 @@ public class ColdHoneyBottleItem extends Item {
         super.finishUsing(stack, world, user);
         if (!world.isClient) {
             user.setFrozenTicks(0);
+        }
+        if (user instanceof PlayerEntity p) {
+            p.getItemCooldownManager().set(this, COOLDOWN_TICKS); // нельзя пить подряд
         }
         if (stack.isEmpty()) {
             return new ItemStack(Items.GLASS_BOTTLE);
