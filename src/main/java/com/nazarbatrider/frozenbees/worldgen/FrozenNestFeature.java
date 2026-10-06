@@ -45,8 +45,8 @@ public class FrozenNestFeature extends Feature<FrozenNestConfig> {
         } else {
             List<BlockPos> spots = new ArrayList<>();
             List<Direction> dirs = new ArrayList<>();
-            for (int dx = -5; dx <= 5; dx++) {
-                for (int dz = -5; dz <= 5; dz++) {
+            for (int dx = -7; dx <= 7; dx++) {
+                for (int dz = -7; dz <= 7; dz++) {
                     for (int dy = -10; dy <= 6; dy++) {
                         BlockPos log = origin.add(dx, dy, dz);
                         if (!world.getBlockState(log).isIn(BlockTags.SPRUCE_LOGS)) continue;
