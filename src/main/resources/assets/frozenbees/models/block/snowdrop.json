@@ -1,1 +1,1 @@
-{"parent":"minecraft:block/cross","render_type":"minecraft:cutout","textures":{"cross":"frozenbees:block/snowdrop"}}
+{"parent":"minecraft:block/cross","textures":{"cross":"frozenbees:block/snowdrop"}}
