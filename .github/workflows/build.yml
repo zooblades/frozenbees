@@ -12,7 +12,16 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: 8.8
-      - run: gradle build --stacktrace
+      - name: Build
+        run: |
+          set +e
+          gradle build --stacktrace > build.log 2>&1
+          code=$?
+          if [ $code -ne 0 ]; then
+            msg=$(grep -E "error:|What went wrong|Exception|Caused by" -A3 build.log | head -60 | sed ':a;N;$!ba;s/\n/%0A/g')
+            echo "::error title=BUILD ERRORS::$msg"
+          fi
+          exit $code
       - uses: actions/upload-artifact@v4
         with:
           name: frozenbees-jar
