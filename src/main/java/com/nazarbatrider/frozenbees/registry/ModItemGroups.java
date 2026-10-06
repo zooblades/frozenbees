@@ -23,6 +23,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FROZEN_HONEYCOMB_BLOCK);
                         entries.add(ModItems.COLD_HONEY_BOTTLE);
                         entries.add(ModBlocks.COLD_HONEY_BLOCK);
+                        entries.add(ModBlocks.COOLER);
+                        entries.add(ModItems.FROZEN_ARROW);
                     }).build());
 
     public static void register() {}

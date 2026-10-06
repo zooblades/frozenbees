@@ -9,5 +9,7 @@
   "block.frozenbees.frozen_bee_nest": "Frozen Bee Nest",
   "block.frozenbees.frozen_beehive": "Frozen Beehive",
   "entity.frozenbees.frozen_bee": "Frozen Bee",
-  "item.frozenbees.frozen_bee_spawn_egg": "Frozen Bee Spawn Egg"
+  "item.frozenbees.frozen_bee_spawn_egg": "Frozen Bee Spawn Egg",
+  "block.frozenbees.cooler": "Cooler",
+  "item.frozenbees.frozen_arrow": "Frozen Arrow"
 }

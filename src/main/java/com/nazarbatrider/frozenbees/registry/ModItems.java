@@ -2,9 +2,14 @@ package com.nazarbatrider.frozenbees.registry;
 
 import com.nazarbatrider.frozenbees.FrozenBees;
 import com.nazarbatrider.frozenbees.item.ColdHoneyBottleItem;
+import java.util.List;
+import java.util.Optional;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.FoodComponent;
+import net.minecraft.component.type.PotionContentsComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.ArrowItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.item.SpawnEggItem;
@@ -22,6 +27,10 @@ public class ModItems {
 
     public static final Item FROZEN_BEE_SPAWN_EGG = register("frozen_bee_spawn_egg",
             new SpawnEggItem(ModEntities.FROZEN_BEE, 0xA8DCF5, 0xFFFFFF, new Item.Settings()));
+
+    public static final Item FROZEN_ARROW = register("frozen_arrow", new ArrowItem(new Item.Settings()
+            .component(DataComponentTypes.POTION_CONTENTS, new PotionContentsComponent(Optional.empty(), Optional.of(0xA8DCF5),
+                    List.of(new StatusEffectInstance(StatusEffects.SLOWNESS, 160, 1))))));
 
     private static Item register(String name, Item item) {
         return Registry.register(Registries.ITEM, FrozenBees.id(name), item);

@@ -92,6 +92,9 @@ public class FrozenHiveBlockEntity extends BlockEntity {
 
     public static void serverTick(World world, BlockPos pos, BlockState state, FrozenHiveBlockEntity be) {
         if (be.occupants.isEmpty()) return;
+        if (world.random.nextInt(250) == 0) {
+            world.playSound(null, pos, SoundEvents.BLOCK_BEEHIVE_WORK, SoundCategory.BLOCKS, 1.0f, 1.0f);
+        }
         boolean changed = false;
         Iterator<Occupant> it = be.occupants.iterator();
         while (it.hasNext()) {

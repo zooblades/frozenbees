@@ -9,5 +9,7 @@
   "block.frozenbees.frozen_bee_nest": "Морозное пчелиное гнездо",
   "block.frozenbees.frozen_beehive": "Морозный улей",
   "entity.frozenbees.frozen_bee": "Замороженная пчела",
-  "item.frozenbees.frozen_bee_spawn_egg": "Яйцо призыва замороженной пчелы"
+  "item.frozenbees.frozen_bee_spawn_egg": "Яйцо призыва замороженной пчелы",
+  "block.frozenbees.cooler": "Охладитель",
+  "item.frozenbees.frozen_arrow": "Морозная стрела"
 }

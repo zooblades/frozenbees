@@ -18,6 +18,9 @@ import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.passive.BeeEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
+import org.jetbrains.annotations.Nullable;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -57,6 +60,13 @@ public class FrozenBeeEntity extends BeeEntity {
         }
     }
 
+    /** Редкое жужжание (ванильный звук пчелы). */
+    @Nullable
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return SoundEvents.ENTITY_BEE_LOOP;
+    }
+
     /** Пчела морозная: не замерзает. */
     @Override
     public boolean canFreeze() {
@@ -71,6 +81,7 @@ public class FrozenBeeEntity extends BeeEntity {
             living.removeStatusEffect(StatusEffects.POISON);
             living.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 200, 1), this);
             living.setFrozenTicks(Math.min(living.getMinFreezeDamageTicks(), living.getFrozenTicks() + 100));
+            living.playSound(SoundEvents.ENTITY_PLAYER_HURT_FREEZE, 1.0f, 1.0f);
         }
         return hit;
     }
@@ -237,6 +248,7 @@ public class FrozenBeeEntity extends BeeEntity {
                 }
                 if (near >= 100) {
                     bee.setNectar(true);
+                    bee.playSound(SoundEvents.ENTITY_BEE_POLLINATE, 1.0f, 1.0f);
                 }
             } else if (bee.getNavigation().isIdle() || total % 20 == 0) {
                 bee.getNavigation().startMovingTo(c.x, c.y, c.z, 1.0);
