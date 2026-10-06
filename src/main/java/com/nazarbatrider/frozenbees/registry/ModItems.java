@@ -7,6 +7,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
@@ -18,6 +19,9 @@ public class ModItems {
                     .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.1f).alwaysEdible()
                             .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 1200), 1.0f)
                             .build())));
+
+    public static final Item FROZEN_BEE_SPAWN_EGG = register("frozen_bee_spawn_egg",
+            new SpawnEggItem(ModEntities.FROZEN_BEE, 0xA8DCF5, 0xFFFFFF, new Item.Settings()));
 
     private static Item register(String name, Item item) {
         return Registry.register(Registries.ITEM, FrozenBees.id(name), item);

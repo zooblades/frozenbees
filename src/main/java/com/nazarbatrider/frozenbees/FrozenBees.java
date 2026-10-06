@@ -1,9 +1,13 @@
 package com.nazarbatrider.frozenbees;
 
+import com.nazarbatrider.frozenbees.block.entity.FrozenHiveTracker;
+import com.nazarbatrider.frozenbees.registry.ModBlockEntities;
 import com.nazarbatrider.frozenbees.registry.ModBlocks;
+import com.nazarbatrider.frozenbees.registry.ModEntities;
 import com.nazarbatrider.frozenbees.registry.ModItemGroups;
 import com.nazarbatrider.frozenbees.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,8 +24,11 @@ public class FrozenBees implements ModInitializer {
     @Override
     public void onInitialize() {
         ModBlocks.register();
+        ModBlockEntities.register();
+        ModEntities.register();
         ModItems.register();
         ModItemGroups.register();
+        ServerLifecycleEvents.SERVER_STOPPED.register(server -> FrozenHiveTracker.clear());
         LOGGER.info("Frozen Bees loaded");
     }
 }

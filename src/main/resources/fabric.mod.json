@@ -8,7 +8,10 @@
   "license": "MIT",
   "icon": "assets/frozenbees/icon.png",
   "environment": "*",
-  "entrypoints": { "main": ["com.nazarbatrider.frozenbees.FrozenBees"] },
+  "entrypoints": {
+    "main": ["com.nazarbatrider.frozenbees.FrozenBees"],
+    "client": ["com.nazarbatrider.frozenbees.client.FrozenBeesClient"]
+  },
   "depends": {
     "fabricloader": ">=0.16.0",
     "minecraft": "~1.21.1",

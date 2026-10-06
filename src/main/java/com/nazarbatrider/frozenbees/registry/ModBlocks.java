@@ -3,6 +3,7 @@ package com.nazarbatrider.frozenbees.registry;
 import com.nazarbatrider.frozenbees.FrozenBees;
 import com.nazarbatrider.frozenbees.block.ColdFlowerBlock;
 import com.nazarbatrider.frozenbees.block.ColdHoneyBlock;
+import com.nazarbatrider.frozenbees.block.FrozenHiveBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -32,6 +33,12 @@ public class ModBlocks {
             AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).velocityMultiplier(0.4f)
                     .jumpVelocityMultiplier(0.5f).slipperiness(0.98f).ticksRandomly()
                     .nonOpaque().sounds(BlockSoundGroup.HONEY)));
+
+    public static final Block FROZEN_BEE_NEST = registerWithItem("frozen_bee_nest", new FrozenHiveBlock(
+            AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(0.3f).sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FROZEN_BEEHIVE = registerWithItem("frozen_beehive", new FrozenHiveBlock(
+            AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(0.6f).sounds(BlockSoundGroup.WOOD)));
 
     private static AbstractBlock.Settings flowerSettings(MapColor color) {
         return AbstractBlock.Settings.create().mapColor(color).noCollision().breakInstantly()

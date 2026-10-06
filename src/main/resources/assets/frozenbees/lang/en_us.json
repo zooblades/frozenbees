@@ -5,5 +5,9 @@
   "block.frozenbees.frozen_honeycomb_block": "Frozen Honeycomb Block",
   "block.frozenbees.cold_honey_block": "Cold Honey Block",
   "item.frozenbees.frozen_honeycomb": "Frozen Honeycomb",
-  "item.frozenbees.cold_honey_bottle": "Cold Honey Bottle"
+  "item.frozenbees.cold_honey_bottle": "Cold Honey Bottle",
+  "block.frozenbees.frozen_bee_nest": "Frozen Bee Nest",
+  "block.frozenbees.frozen_beehive": "Frozen Beehive",
+  "entity.frozenbees.frozen_bee": "Frozen Bee",
+  "item.frozenbees.frozen_bee_spawn_egg": "Frozen Bee Spawn Egg"
 }

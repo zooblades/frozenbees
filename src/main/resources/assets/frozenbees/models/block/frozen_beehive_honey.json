@@ -1,0 +1,1 @@
+{"parent": "minecraft:block/orientable_with_bottom", "textures": {"top": "frozenbees:block/frozen_beehive_top", "bottom": "frozenbees:block/frozen_beehive_bottom", "side": "frozenbees:block/frozen_beehive_side", "front": "frozenbees:block/frozen_beehive_front_honey"}}

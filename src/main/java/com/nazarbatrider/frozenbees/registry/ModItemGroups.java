@@ -16,6 +16,9 @@ public class ModItemGroups {
                     .entries((ctx, entries) -> {
                         entries.add(ModBlocks.SNOWDROP);
                         entries.add(ModBlocks.FROSTBLOOM);
+                        entries.add(ModBlocks.FROZEN_BEE_NEST);
+                        entries.add(ModBlocks.FROZEN_BEEHIVE);
+                        entries.add(ModItems.FROZEN_BEE_SPAWN_EGG);
                         entries.add(ModItems.FROZEN_HONEYCOMB);
                         entries.add(ModBlocks.FROZEN_HONEYCOMB_BLOCK);
                         entries.add(ModItems.COLD_HONEY_BOTTLE);
